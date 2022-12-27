@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.BasicExampleActivity">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableScrollContentWhenLoaded="true"
+            app:srlEnableFooterFollowWhenLoadFinished="true">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlAccentColor="@android:color/black"
+                app:srlPrimaryColor="#FFFFFF"
+                app:srlTextSizeTitle="16sp"
+                app:srlTextSizeTime="10dp"
+                app:srlTextTimeMarginTop="2dp"
+                app:srlEnableLastTime="true"
+                app:srlFinishDuration="500"
+                app:srlDrawableSize="20dp"
+                app:srlDrawableArrowSize="20dp"
+                app:srlDrawableProgressSize="20dp"
+                app:srlDrawableMarginRight="20dp"
+                app:srlDrawableArrow="@mipmap/icon_down2"
+                app:srlDrawableProgress="@mipmap/loading_icon"
+                app:srlClassicsSpinnerStyle="Translate"/>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:overScrollMode="never"
+                tools:listitem="@android:layout/simple_list_item_2"/>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlFinishDuration="0"
+                app:srlClassicsSpinnerStyle="Translate"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
